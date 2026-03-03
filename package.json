@@ -1,0 +1,24 @@
+{
+  "name": "cli_task_tracker",
+  "version": "1.0.0",
+  "description": "Project ideas to take you from beginner to advanced in Node.js",
+  "main": "index.js",
+  "bin": {
+    "CLI_task_Tracker": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusb-dev/CLI_task_Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/matheusb-dev/CLI_task_Tracker/issues"
+  },
+  "homepage": "https://github.com/matheusb-dev/CLI_task_Tracker#readme"
+}
