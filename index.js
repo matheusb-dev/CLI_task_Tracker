@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { addTask } from "./services/taskService.js";
 
 /*#!/usr/bin/env node
 console.log(
@@ -8,4 +9,8 @@ console.log(
 /*"bin": {
     "CLI_task_Tracker": "./index.js"  Transformando esse indice em um executavel
 },*/
-console.log("Hello World");
+
+const [, , command, ...args] = process.argv;
+const description = args.join(" ");
+
+console.log(`Comando: ${command} | Descrição: ${description}`);
