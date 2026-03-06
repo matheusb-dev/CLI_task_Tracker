@@ -11,6 +11,12 @@ console.log(
 },*/
 
 const [, , command, ...args] = process.argv;
-const description = args.join(" ");
 
-console.log(`Comando: ${command} | Descrição: ${description}`);
+switch (command) {
+  case "add":
+    const description = args.join(" ");
+    addTask(description);
+    break;
+  default:
+    console.log("no command");
+}
