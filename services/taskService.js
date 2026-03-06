@@ -4,7 +4,7 @@ import { getCurrentTimestamp } from "../utils/timeUtils.js";
 function addTask(description) {
   const tasks = loadTasks();
   const newTask = {
-    id: "tasksID",
+    id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
     description,
     status: "todo",
     createAt: getCurrentTimestamp(),
@@ -16,4 +16,18 @@ function addTask(description) {
   console.log("Done");
 }
 
-export { addTask };
+function updateTask(id, description) {
+  const tasks = loadTasks();
+  const taskToUpdate = tasks[id - 1];
+  taskToUpdate.description = description;
+  taskToUpdate.updatedAt = getCurrentTimestamp();
+  saveTasks(tasks);
+  console.log(`Task updated successfully (ID: ${taskToUpdate.id})`);
+}
+
+function listTask() {
+  const tasks = loadTasks();
+  console.log(tasks.length);
+}
+
+export { addTask, updateTask, listTask };

@@ -11,7 +11,7 @@ function loadTasks() {
       writeFileSync(filepath, JSON.stringify([]));
       return [];
     }
-    const data = readFileSync(filepatch, "utf-8");
+    const data = readFileSync(filepath, "utf-8");
     if (!data.trim()) return [];
     return JSON.parse(data);
   } catch (err) {

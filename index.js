@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { addTask } from "./services/taskService.js";
+import { addTask, listTask, updateTask } from "./services/taskService.js";
 
 /*#!/usr/bin/env node
 console.log(
@@ -16,6 +16,15 @@ switch (command) {
   case "add":
     const description = args.join(" ");
     addTask(description);
+    break;
+  case "update":
+    const updateId = Number(args[0]);
+    const newDescription = args.slice(1).join(" ");
+    console.log(updateId, newDescription);
+    updateTask(updateId, newDescription);
+    break;
+  case "list":
+    listTask();
     break;
   default:
     console.log("no command");
