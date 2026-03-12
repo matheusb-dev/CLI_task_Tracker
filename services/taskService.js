@@ -30,4 +30,11 @@ function listTask() {
   console.log(tasks.length);
 }
 
-export { addTask, updateTask, listTask };
+function deleteTask(id) {
+  const tasks = loadTasks();
+  const newTasks = tasks.filter((task) => task.id !== id);
+  saveTasks(tasks);
+  console.log("task deleted successfully");
+}
+
+export { addTask, updateTask, listTask, deleteTask };

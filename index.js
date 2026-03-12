@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-import { addTask, listTask, updateTask } from "./services/taskService.js";
+import {
+  addTask,
+  deleteTask,
+  listTask,
+  updateTask,
+} from "./services/taskService.js";
 
 /*#!/usr/bin/env node
 console.log(
@@ -25,6 +30,10 @@ switch (command) {
     break;
   case "list":
     listTask();
+    break;
+  case "del":
+    const deletID = Number(args[0]);
+    deleteTask(deletID);
     break;
   default:
     console.log("no command");
