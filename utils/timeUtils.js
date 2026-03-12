@@ -1,5 +1,3 @@
-function getCurrentTimestamp() {
-  return new Date().toDateString();
+export function getCurrentTimestamp() {
+  return new Date().toLocaleString();
 }
-
-export { getCurrentTimestamp };

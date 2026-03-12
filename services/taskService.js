@@ -1,10 +1,12 @@
 import { loadTasks, saveTasks } from "../utils/fileUtils.js";
+
 import { getCurrentTimestamp } from "../utils/timeUtils.js";
 
-function addTask(description) {
+function addTask(title, description) {
   const tasks = loadTasks();
   const newTask = {
     id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+    title,
     description,
     status: "todo",
     createAt: getCurrentTimestamp(),
@@ -20,21 +22,34 @@ function updateTask(id, description) {
   const tasks = loadTasks();
   const taskToUpdate = tasks[id - 1];
   taskToUpdate.description = description;
-  taskToUpdate.updatedAt = getCurrentTimestamp();
+  taskToUpdate.updateAt = getCurrentTimestamp();
   saveTasks(tasks);
   console.log(`Task updated successfully (ID: ${taskToUpdate.id})`);
-}
-
-function listTask() {
-  const tasks = loadTasks();
-  console.log(tasks.length);
 }
 
 function deleteTask(id) {
   const tasks = loadTasks();
   const newTasks = tasks.filter((task) => task.id !== id);
-  saveTasks(tasks);
+  saveTasks(newTasks);
   console.log("task deleted successfully");
 }
 
-export { addTask, updateTask, listTask, deleteTask };
+function deleteAll() {
+  const tasks = loadTasks();
+  saveTasks([]);
+  console.log("task deleted successfully");
+}
+
+function listasTask() {
+  const tasks = loadTasks();
+  const listTask = tasks.map((task) => task.id);
+  console.log(listTask);
+}
+
+function listTaskID(id) {
+  const tasks = loadTasks();
+  const listasTaskID = tasks.filter((task) => task.id == id);
+  console.log(listasTaskID);
+}
+
+export { addTask, updateTask, deleteTask, listasTask, listTaskID, deleteAll };

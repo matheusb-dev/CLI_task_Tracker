@@ -2,8 +2,10 @@
 import {
   addTask,
   deleteTask,
-  listTask,
+  listTaskID,
+  listasTask,
   updateTask,
+  deleteAll,
 } from "./services/taskService.js";
 
 /*#!/usr/bin/env node
@@ -19,21 +21,29 @@ const [, , command, ...args] = process.argv;
 
 switch (command) {
   case "add":
-    const description = args.join(" ");
-    addTask(description);
+    const title = args[0];
+    const description = args[1];
+    addTask(title, description);
     break;
-  case "update":
+  case "upt":
     const updateId = Number(args[0]);
     const newDescription = args.slice(1).join(" ");
     console.log(updateId, newDescription);
     updateTask(updateId, newDescription);
     break;
   case "list":
-    listTask();
+    listasTask();
     break;
   case "del":
     const deletID = Number(args[0]);
     deleteTask(deletID);
+    break;
+  case "delAll":
+    deleteAll();
+    break;
+  case "listid":
+    const listasTaskID = Number(args[0]);
+    listTaskID(listasTaskID);
     break;
   default:
     console.log("no command");
