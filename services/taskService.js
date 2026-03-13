@@ -52,4 +52,21 @@ function listTaskID(id) {
   console.log(listasTaskID);
 }
 
-export { addTask, updateTask, deleteTask, listasTask, listTaskID, deleteAll };
+function markTask(id, status) {
+  const tasks = loadTasks();
+  const taskToMark = tasks[id - 1];
+  taskToMark.status = status;
+  taskToMark.updateAt = getCurrentTimestamp();
+  saveTasks(tasks);
+  console.log("Task marked successfully");
+}
+
+export {
+  addTask,
+  updateTask,
+  deleteTask,
+  listasTask,
+  listTaskID,
+  deleteAll,
+  markTask,
+};

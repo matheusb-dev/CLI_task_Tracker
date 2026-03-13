@@ -6,6 +6,7 @@ import {
   listasTask,
   updateTask,
   deleteAll,
+  markTask,
 } from "./services/taskService.js";
 
 /*#!/usr/bin/env node
@@ -44,6 +45,11 @@ switch (command) {
   case "listid":
     const listasTaskID = Number(args[0]);
     listTaskID(listasTaskID);
+    break;
+  case "make":
+    const maskId = Number(args[0]);
+    const status = args.slice(1).join(" ");
+    markTask(maskId, status);
     break;
   default:
     console.log("no command");
