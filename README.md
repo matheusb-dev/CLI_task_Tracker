@@ -130,6 +130,13 @@ $ task-cli list
     "updateAt": "13/03/2026, 10:41:51"
   }
 ```
+## 📦 Milestones
+
+| 1. New Features |         Status          |   
+| :------------------------------------------------------------------------------------ | :---------------------: | 
+| <a href="https://github.com/matheusb-dev/CLI_task_Tracker/issues/1">Retornar erros</a> |   pendênte                                                                                                                           
+| <a href="https://github.com/matheusb-dev/CLI_task_Tracker/issues/2">Validar</a>      | pendênte
+
 
 ---
 
@@ -145,7 +152,6 @@ $ task-cli list
 ## 🧑‍💻 Autor
 
 **Matheus Bezerra Domingos**
-📧 [matheusbezerradomingos@gmail.com]
-🌐 [https://github.com/matheusb-dev](https://github.com/matheusb-dev)
+
 
 ---
