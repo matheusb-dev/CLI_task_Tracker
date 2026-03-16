@@ -46,11 +46,13 @@ switch (command) {
     const listasTaskID = Number(args[0]);
     listTaskID(listasTaskID);
     break;
-  case "make":
-    const maskId = Number(args[0]);
+  case "mark":
+    const markId = Number(args[0]);
     const status = args.slice(1).join(" ");
-    markTask(maskId, status);
+    markTask(markId, status);
     break;
   default:
-    console.log("no command");
+    console.log(
+      "❓ Unknown command. Try 'add', 'upd', 'list', 'listid', 'delAll', 'del' .",
+    );
 }
