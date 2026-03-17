@@ -1,12 +1,12 @@
 ---
-# 📝 Task Tracker CLI
+# 📝 Tasks Tracker CLI
 
-Uma simple Interface de Linha de Comando **Command Line Interface (CLI)** aplicação usando **Node.js**
+Uma simple Interface de Linha de Comando - **Command Line Interface (CLI)**, que permite executar comandos no nosso terminal, utilizando **Node.js**. 
 ---
 
 ## ⚙️ Instalação e Configuração
 
-### 1️⃣ Clone this repository
+### 1️⃣ Clone esse repositório
 
 ```bash
 git clone https://github.com/matheusb-dev/CLI_task_Tracker
@@ -135,6 +135,19 @@ $  CLI_task_Tracker listid 1
 - **Command Line Interface (CLI)**
 
 ---
+
+
+### 🤔 Novas implementações - Milestones
+
+| 1. New Features <a href="https://github.com/matheusb-dev/CLI_task_Tracker/milestones">New Features</a>                                                                                |         Status          |
+|-------------------------------------------------------------------------------|-------------------------------|
+| <a href="https://github.com/matheusb-dev/CLI_task_Tracker/issues/3">Melhorar Código</a> | todo |                       
+| <a href="https://github.com/matheusb-dev/CLI_task_Tracker/issues/2">Validações</a>      |todo |
+| <a href="https://github.com/matheusb-dev/CLI_task_Tracker/issues/1">Retornar erros</a>      |todo |
+
+
+---
+
 
 ## 🧑‍💻 Author
 
