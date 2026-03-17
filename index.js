@@ -53,6 +53,6 @@ switch (command) {
     break;
   default:
     console.log(
-      "❓ Unknown command. Try 'add', 'upd', 'list', 'listid', 'delAll', 'del' .",
+      "❓ Unknown command. Try 'add', 'upt', 'list', 'listid', 'delAll', 'del' .",
     );
 }

@@ -6,5 +6,13 @@
     "status": "todo",
     "createAt": "16/03/2026, 15:58:35",
     "updateAt": "16/03/2026, 15:58:35"
+  },
+  {
+    "id": 2,
+    "title": "Refazer README.md,",
+    "description": "Do CLI_task_Tracker",
+    "status": "in-progress",
+    "createAt": "17/03/2026, 08:49:14",
+    "updateAt": "17/03/2026, 08:51:16"
   }
 ]
